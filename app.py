@@ -37,7 +37,6 @@ response = requests.get(url, params=params)
 data = round(response.json()['prediction'], 2)
 f'Predicted price : ${data}'
 
-token = "pk.eyJ1IjoiemFwamFuaWNlIiwiYSI6ImNrcDd1dWh3eTA0Mm8yd3Z5NGNrNHZ6eG0ifQ.fRooy_nFj7QFb6ISqYvr_w"
 
 dictionary = {'lat': [pickup_latitude, dropoff_latitude], 'lon': [pickup_longitude, dropoff_longitude]}
 map_data = pd.DataFrame.from_dict(dictionary)
